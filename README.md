@@ -3,7 +3,7 @@
 ```txt
 this is web3jsDemo for gnc
 ```
-### haw to download
+### how to download
 
 ```npm
     npm install web3
@@ -13,9 +13,9 @@ this is web3jsDemo for gnc
 
 ### Notice
 * 1.The address showed to users shall keep the prefix with 'GNC';
-* 2.Before calling the Galaxy Network RPC interface, please replace the transfer address prefix 'GNC' entered by users with '0x'
+* 2.Before calling the GalaxyNetwork RPC interface, please replace the transfer address that users entering from prefix 'GNC' to '0x'.
 
-### Show to users:
+### Shown to users:
 ```js
     var Web3 = require('web3');
 
