@@ -3,19 +3,14 @@ var Web3 = require('web3');
 
 var web3 = new Web3(new Web3.providers.HttpProvider("http://chain-node.galaxynetwork.vip"));
 
-var oldGNC_toAddress ='GNC6cBe9DF6DF54281D363e7a5e1790dc66212438C7'
+var newGNC_fromAddress ='0x6cBe9DF6DF54281D363e7a5e1790dc66212438C7'
 
 
 let fromPrivateKey= 'a59bc058eb76eea5b64f1e55a803aa0968efda8a943f8f7eb835a6df9ac3a835';
 
-let oldGNC_fromAddress = 'GNC7d4ed9084A364424d1087d26C4Ef092EAfB0b395';
+let newGNC_toAddress = '0x7d4ed9084A364424d1087d26C4Ef092EAfB0b395';
 
-// The new GNC chain address prefix is '0x', so the old chain address prefix passed in must replace 'GNC' with '0x', 
-
-var newGNC_toAddress=oldGNC_toAddress.replace('GNC','0x')
-var newGNC_fromAddress=oldGNC_fromAddress.replace('GNC','0x')
-
-
+// The new GNC chain address prefix is '0x', so the old chain address prefix passed in must replace 'GNC' with '0x',
 if (!web3.utils.isAddress(newGNC_fromAddress)){
   console.log("address is unverifity")
   return

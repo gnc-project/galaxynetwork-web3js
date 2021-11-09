@@ -12,8 +12,10 @@ this is web3jsDemo for gnc
 
 
 ### Notice
-* 1.The address showed to users shall keep the prefix with 'GNC';
-* 2.Before calling the GalaxyNetwork RPC interface, please replace the transfer address that users entering from prefix 'GNC' to '0x'.
+* 1.Replace the old chain address prefix 'GNC' with '0x'
+* 2.Keep the RPC/API same with Ethereum v1.10.8
+* 3.Block Number starts from 0
+* 4.Block confirmations 32
 
 ### Shown to users:
 ```js
@@ -22,15 +24,18 @@ this is web3jsDemo for gnc
     var web3 = new Web3(new Web3.providers.HttpProvider("http://chain-node.galaxynetwork.vip"));
 
     var newAccount=web3.eth.accounts.create()
- 
-    console.log(newAccount.address.replace('0x','GNC'))
-    console.log(newAccount.privateKey)
+    //0x6bacec0a630a53fdbae5f1f10bf87fe2b422eec1
+    console.log(newAccount.address)
 ```
 
 ### User input:
 ```js
-    var oldGNC_Address ='GNC6cBe9DF6DF54281D363e7a5e1790dc66212438C7'
+    //user input GNC address
+    var oldGNC_Address ='0x6cBe9DF6DF54281D363e7a5e1790dc66212438C7'
 
-    var newGNC_Address=oldGNC_Address.replace('GNC','0x')
+    //call rpc ...
+    web3.eth.getBalance(addr).then(
+        console.log
+    )
  
 ```
